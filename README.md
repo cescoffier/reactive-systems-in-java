@@ -11,8 +11,10 @@ You will find Maven build descriptors for each project, so you can load the proj
 
 As an example if you want to build the code example from the chapter 2, open a terminal and run:
 
+```shell script
 $ cd chapter-2
 $ ./mvnw package
+```
 
 The book examples work best using some Unix environment: Linux, macOS or the Windows Subsystem for Linux from Microsoft.
 
