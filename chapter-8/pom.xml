@@ -5,19 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.oreilly.reactive</groupId>
-    <artifactId>reactive-systems-in-java-project</artifactId>
+    <artifactId>chapter-8</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Reactive Systems in Java :: Project</name>
+    <name>Reactive Systems in Java :: Chapter 8</name>
 
     <packaging>pom</packaging>
 
     <modules>
-        <module>chapter-2</module>
-        <module>chapter-3</module>
-        <module>chapter-4</module>
-        <module>chapter-5</module>
-        <module>chapter-7</module>
-        <module>chapter-8</module>
+        <module>resteasy-reactive-examples</module>
+        <module>simple-benchmark/classic</module>
+        <module>simple-benchmark/reactive</module>
+        <module>simple-benchmark/reactive-blocking</module>
+        <module>mutiny-integration-examples</module>
+        <module>reactive-scores</module>
     </modules>
 
 </project>
