@@ -1,0 +1,13 @@
+{
+  "name": "customer-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "quarkus_test",
+    "database.password": "quarkus_test",
+    "database.dbname": "quarkus_test",
+    "database.server.name": "quarkus-db-server"
+  }
+}
