@@ -2,9 +2,7 @@ package org.acme.gateway;
 
 import io.smallrye.common.annotation.NonBlocking;
 import io.smallrye.mutiny.Uni;
-import org.eclipse.microprofile.faulttolerance.CircuitBreaker;
-import org.eclipse.microprofile.faulttolerance.Fallback;
-import org.eclipse.microprofile.faulttolerance.Timeout;
+import org.eclipse.microprofile.faulttolerance.*;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import javax.ws.rs.GET;
@@ -18,11 +16,13 @@ public interface QuoteService {
     @CircuitBreaker
     @Timeout(2000)
     @NonBlocking
-    @Fallback(fallbackMethod = "getFallbackQuote")
+    @Fallback(MyFallbackHandler.class)
     Uni<String> getQuote();
 
-    default Uni<String> getFallbackQuote() {
-        return Uni.createFrom().item("no coffee - no quote");
+    class MyFallbackHandler implements FallbackHandler<Uni<String>> {
+        @Override
+        public Uni<String> handle(ExecutionContext context) {
+            return Uni.createFrom().item("no coffee - no quote");
+        }
     }
-
 }
