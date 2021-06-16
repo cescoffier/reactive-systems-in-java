@@ -1,0 +1,48 @@
+---
+ticker:
+  replicaCount: 1
+  image:
+    repository: event-bus/ticker
+    version: latest
+    pullPolicy: IfNotPresent
+
+processor:
+  replicaCount: 1
+  image:
+    repository: event-bus/processor
+    version: latest
+    pullPolicy: IfNotPresent
+
+viewer:
+  replicaCount: 1
+  image:
+    repository: event-bus/viewer
+    version: latest
+    pullPolicy: IfNotPresent
+
+# The namespace and service name for the Kafka server.
+kafka:
+  namespace: kafka
+  cluster: my-cluster
+  bootstrap:
+    service: my-cluster-kafka-bootstrap
+    port: 9092
+
+# AMQP Broker
+amqp:
+  host: amqp
+  port: 5672
+  username: admin
+  password: admin
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #  cpu: 100m
+  #  memory: 128Mi
+  # requests:
+#  cpu: 100m
+#  memory: 128Mi
