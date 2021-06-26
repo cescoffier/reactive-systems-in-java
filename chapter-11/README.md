@@ -92,7 +92,7 @@ cd ..
 
 ### Deploy with Helm
 
-Adjust the image name for each service in `deploy/event-bus-example/values.yaml` if registry part needs modification.
+Adjust the image name for each service in `deploy/event-bus/values.yaml` if registry part needs modification.
 
 Then run:
 

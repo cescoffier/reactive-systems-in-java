@@ -1,0 +1,64 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/name: jaeger
+  name: jaeger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: jaeger
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/name: jaeger
+    spec:
+      containers:
+        - image: jaegertracing/all-in-one:latest
+          name: jaeger
+          ports:
+            - containerPort: 16686
+            - containerPort: 14250
+          resources: {}
+      restartPolicy: Always
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/name: jaeger
+  name: simplest-collector
+spec:
+  selector:
+    app.kubernetes.io/name: jaeger
+  ports:
+    - name: "14250"
+      port: 14250
+      targetPort: 14250
+status:
+  loadBalancer: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/name: jaeger
+  name: jaeger-ui
+spec:
+  selector:
+    app.kubernetes.io/name: jaeger
+  type: NodePort
+  ports:
+    - name: "16686"
+      port: 16686
+      targetPort: 16686
+status:
+  loadBalancer: {}
