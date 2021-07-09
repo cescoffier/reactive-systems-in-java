@@ -13,6 +13,7 @@
 
     <modules>
         <module>mutiny-examples</module>
+        <module>order-example</module>
     </modules>
 
 </project>
