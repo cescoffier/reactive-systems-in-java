@@ -30,7 +30,7 @@ strimzi-cluster-operator-58fcdbfc8f-mjdxg   1/1     Running   0          46s
 With the operator running, we can now create a Kafka cluster!
 
 ```shell
-kubectl apply -f chapter-11/deploy/kafka/kafka-cluster.yaml -n kafka
+kubectl apply -f deploy/kafka/kafka-cluster.yaml -n kafka
 ```
 
 We can verify successful installation of the cluster with:
@@ -46,8 +46,8 @@ my-cluster-zookeeper-0                        1/1     Running   0          2m12s
 ### Create Topics
 
 ```shell
-kubectl apply -f chapter-11/deploy/kafka/ticks.yaml
-kubectl apply -f chapter-11/deploy/kafka/processed.yaml
+kubectl apply -f deploy/kafka/ticks.yaml
+kubectl apply -f deploy/kafka/processed.yaml
 ```
 
 ## Run AMQP Broker
