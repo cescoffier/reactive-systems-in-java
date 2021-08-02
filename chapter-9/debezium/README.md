@@ -9,7 +9,8 @@ docker compose up
 In another terminal, run the Quarkus application in _/chapter-9/debezium_:
 
 ```shell
-mvn quarkus:dev
+mvn clean package
+java -jar target/quarkus-app/quarkus-run.jar
 ```
 
 ## Create Postgres connector
