@@ -1,6 +1,6 @@
 package org.acme;
 
-import io.smallrye.common.annotation.Blocking;
+import io.smallrye.common.annotation.NonBlocking;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -12,13 +12,13 @@ public class ReactiveGreetingResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
+    @NonBlocking
     public String hello() {
         return "Hello RESTEasy Reactive from " + Thread.currentThread().getName();
     }
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    @Blocking
     @Path("/blocking")
     public String helloBlocking() {
         return "Hello RESTEasy Reactive from " + Thread.currentThread().getName();
