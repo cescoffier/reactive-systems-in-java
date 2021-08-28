@@ -1,6 +1,5 @@
 package org.acme.gateway;
 
-import io.smallrye.common.annotation.NonBlocking;
 import io.smallrye.mutiny.Uni;
 import org.eclipse.microprofile.faulttolerance.*;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
@@ -16,7 +15,6 @@ public interface GreetingService {
     @Path("/")
     @CircuitBreaker
     @Timeout(2000)
-    @NonBlocking
     @Fallback(GreetingFallback.class)
     Uni<String> greeting(@QueryParam("name") String name);
 

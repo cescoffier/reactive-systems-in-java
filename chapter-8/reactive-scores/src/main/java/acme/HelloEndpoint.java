@@ -2,11 +2,10 @@ package acme;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.smallrye.common.annotation.Blocking;
+import io.smallrye.common.annotation.NonBlocking;
 import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;
 
-import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
@@ -15,13 +14,13 @@ public class HelloEndpoint {
 
     @GET
     @Path("/simple")
+    @NonBlocking
     public String hello() {
         return "hello";
     }
 
     @GET
     @Path("/simple-blocking")
-    @Blocking
     public String helloBlocking() {
         return "hello";
     }
@@ -49,7 +48,6 @@ public class HelloEndpoint {
 
     @GET
     @Path("/json-blocking")
-    @Blocking
     public User userBlocking() {
         return new User("leia");
     }
@@ -58,6 +56,7 @@ public class HelloEndpoint {
     @Path("/json")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
+    @NonBlocking
     public String post(User user) {
         System.out.println("User is " + user);
         return user.name;
