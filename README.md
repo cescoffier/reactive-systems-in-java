@@ -13,7 +13,7 @@ As an example if you want to build the code example from the chapter 2, open a t
 
 ```shell script
 $ cd chapter-2
-$ ./mvn package
+$ mvn package # or ./mvnw package
 ```
 
 The book examples work best using some Unix environment: Linux, macOS or the Windows Subsystem for Linux from Microsoft.
@@ -29,7 +29,9 @@ The following folders are available:
 * [Chapter 7 - Mutiny: An Event-Driven Reactive Programming API](./chapter-7)
 * [Chapter 8 - HTTP with Reactive in Mind](./chapter-8)
 * [Chapter 9 - Accessing Data Reactively](./chapter-9)
-* [Chapter 11 - The Event Bus: The Backbone](./chapter-13)
+* [Chapter 10 - Reactive Messaging: The Connective Tissue](./chapter-10)
+* [Chapter 11 - The Event Bus: The Backbone](./chapter-11)
+* [Chapter 12 - Reactive REST Client: Connecting with HTTP Endpoints](./chapter-12)
 * [Chapter 13 - Observing Reactive and Event-Driven Architectures](./chapter-13)
 
 The _main_ branch is where you must look for working examples.
