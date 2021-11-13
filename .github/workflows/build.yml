@@ -9,7 +9,7 @@ jobs:
       matrix:
         java: [
           {"version": 11, "extra": "-Pnative -Dquarkus.native.container-build=true"},
-          {"version": 17, "extra": "-pl \!chapter-2/thorntail-hello"}
+          {"version": 17, "extra": "-pl !chapter-2/thorntail-hello"}
         ]
     name: Build with jdk ${{matrix.java.version}}
     steps:
