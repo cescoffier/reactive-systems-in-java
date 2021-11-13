@@ -11,7 +11,6 @@
 
     <packaging>pom</packaging>
 
-
     <modules>
         <module>thorntail-hello</module>
         <module>quarkus-hello</module>
