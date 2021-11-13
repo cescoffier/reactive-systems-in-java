@@ -4,19 +4,19 @@ import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;
 import org.acme.users.UserProfile;
 
+/**
+ * Various examples of code using Mutiny.
+ */
 public class UniMultiExample {
 
     UserService users;
 
     public void example() {
-        //tag::code[]
         Uni<UserProfile> uni = UserProfile.findByName("leia");
         Multi<UserProfile> multi = UserProfile.streamAll();
-        //end::code[]
     }
 
     public void sub() {
-        //tag::subscription[]
         Uni<UserProfile> uni = users.getUserByName("leia");
         Multi<UserProfile> multi = users.getAllUsers();
 
@@ -30,11 +30,9 @@ public class UniMultiExample {
                 failure -> System.out.println("D'oh! " + failure),
                 () -> System.out.println("No more user")
         );
-        //end::subscription[]
     }
 
     public void uni() {
-        //tag::uni[]
         Uni<UserProfile> uni = users.getUserByName("leia");
         uni
                 .onItem().transform(user -> user.name)
@@ -42,11 +40,9 @@ public class UniMultiExample {
                 .subscribe().with(
                     name -> System.out.println("User is" + name)
         );
-        //end::uni[]
     }
 
     public void multi() {
-        // tag::multi[]
         Multi<UserProfile> multi = users.getAllUsers();
         multi
                 .onItem().transform(user -> user.name.toLowerCase())
@@ -55,6 +51,5 @@ public class UniMultiExample {
                 .subscribe().with(
                         list -> System.out.println("User names starting with `l`" + list)
         );
-        //end::multi[]
     }
 }

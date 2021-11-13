@@ -5,7 +5,7 @@ Welcome World!
 These are the working examples for Reactive Systems in Java from O'Reilly and written by Clement Escoffier and Ken Finnigan.
 
 ## How to open and run the examples?
-Readers of the book should directly open projects from subfolders: they are all independent and self-contained.
+Readers of the book should directly open projects from sub-folders: they are all independent and self-contained.
 
 You will find Maven build descriptors for each project, so you can load the projects with text editors or integrated development environments such as IntelliJ IDEA, Eclipse IDE or Microsoft Visual Studio Code.
 
@@ -25,7 +25,8 @@ The following folders are available:
 * [Chapter 2 - Introduction to Quarkus](./chapter-2)
 * [Chapter 3 - Distributed Systems: What the heck?](./chapter-3)
 * [Chapter 4 - Design Principles of Reactive Systems](./chapter-4)
-* [Chapter 5 - Reactive Programming: Taming the asynchrony ](./chapter-5)
+* [Chapter 5 - Reactive Programming: Taming the Asynchronicity](./chapter-5)
+* [Chapter 7 - Mutiny: An Event-Driven Reactive Programming API ](./chapter-7)
 
-The _master_ branch is where you must look for working examples.
+The _main_ branch is where you must look for working examples.
 
