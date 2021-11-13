@@ -22,7 +22,7 @@
         <quarkus.platform.version>2.4.1.Final</quarkus.platform.version>
         <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
 
-        <docker-plugin.version>0.28.0</docker-plugin.version>
+        <docker-plugin.version>0.38.0</docker-plugin.version>
     </properties>
     <dependencyManagement>
         <dependencies>
