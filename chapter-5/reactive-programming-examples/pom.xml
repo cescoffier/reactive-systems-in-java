@@ -18,7 +18,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <mutiny.version>0.14.0</mutiny.version>
-        <mutiny-vertx.version>1.5.0</mutiny-vertx.version>
+        <mutiny-vertx.version>2.15.1</mutiny-vertx.version>
     </properties>
 
     <dependencies>
