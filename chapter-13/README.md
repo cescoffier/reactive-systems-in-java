@@ -1,4 +1,4 @@
-# Chapter 13
+# Chapter 13 - Observing Reactive and Event-Driven Architectures
 
 ## Pre-requisites
 

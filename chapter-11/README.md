@@ -1,4 +1,4 @@
-# Chapter 11
+# Chapter 11 - The Event Bus: The Backbone
 
 ## Pre-requisites
 
