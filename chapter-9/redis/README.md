@@ -1,6 +1,6 @@
-# Hibernate Reactive Example
+# REdis Example
 
-This module is a simple reactive application using Quarkus and Hibernate Reactive.
+This module is a simple reactive application using Quarkus and Redis.
 
 ## Dev
 
@@ -30,9 +30,9 @@ Once packaged, you can run the application with:
 > java -jar target/quarkus-app/quarkus-run.jar
 ```
 
-In production mode, you need to start a PostgreSQL instance in Docker.
+In production mode, you need to start a Redis instance in Docker.
 You can create one using:
 
 ```shell
-docker run --ulimit memlock=-1:-1 -it --rm=true --memory-swappiness=0 --name quarkus_test -e POSTGRES_USER=quarkus_test -e POSTGRES_PASSWORD=quarkus_test -e POSTGRES_DB=quarkus_test -p 5432:5432 postgres:13.2
+docker run --ulimit memlock=-1:-1 -it --rm=true --memory-swappiness=0 --name redis_quarkus_test -p 6379:6379 redis:5.0.6
 ```

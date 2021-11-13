@@ -41,10 +41,10 @@ docker exec -ti kafka bin/kafka-topics.sh --list --zookeeper zookeeper:2181
 
 ```shell
 docker-compose exec kafka /kafka/bin/kafka-console-consumer.sh \
---bootstrap-server kafka:9092 \
---from-beginning \
---property print.key=true \
---topic quarkus-db-server.public.customer
+    --bootstrap-server kafka:9092 \
+    --from-beginning \
+    --property print.key=true \
+    --topic quarkus-db-server.public.customer
 ```
 
 Upon starting, four messages will be processed representing the four customers that were loaded
