@@ -12,7 +12,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <compiler-plugin.version>3.8.1</compiler-plugin.version>
+        <compiler-plugin.version>3.9.0</compiler-plugin.version>
         <jar-plugin.version>3.2.2</jar-plugin.version>
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <maven.compiler.source>11</maven.compiler.source>
