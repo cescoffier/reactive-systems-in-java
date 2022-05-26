@@ -5,6 +5,8 @@ It exposes the `/shop` resource
 
 ## Dev
 
+Make sure the `Docker` daemon is up and running.
+
 You can run this application in dev mode using:
 
 ```shell
