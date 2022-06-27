@@ -67,7 +67,7 @@
         <dependency>
             <groupId>io.smallrye.reactive</groupId>
             <artifactId>smallrye-mutiny-vertx-pg-client</artifactId>
-            <version>2.22.0</version>
+            <version>2.23.0</version>
         </dependency>
         <dependency>
             <groupId>io.smallrye.reactive</groupId>
