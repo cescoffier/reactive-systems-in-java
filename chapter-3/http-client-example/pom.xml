@@ -13,7 +13,7 @@
 
     <properties>
         <compiler-plugin.version>3.10.1</compiler-plugin.version>
-        <jar-plugin.version>3.2.2</jar-plugin.version>
+        <jar-plugin.version>3.3.0</jar-plugin.version>
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
