@@ -13,7 +13,7 @@
 
     <properties>
         <version.thorntail>2.7.0.Final</version.thorntail>
-        <version.jkube>1.8.0</version.jkube>
+        <version.jkube>1.11.0</version.jkube>
 
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
