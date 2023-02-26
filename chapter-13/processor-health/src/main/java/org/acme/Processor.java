@@ -5,6 +5,8 @@ import org.eclipse.microprofile.reactive.messaging.Incoming;
 import org.eclipse.microprofile.reactive.messaging.Message;
 import org.eclipse.microprofile.reactive.messaging.Outgoing;
 
+import io.smallrye.common.annotation.Blocking;
+
 import javax.inject.Singleton;
 import java.net.InetAddress;
 
@@ -16,6 +18,7 @@ public class Processor {
   @Incoming("ticks")
   @Outgoing("processed")
   @Acknowledgment(Acknowledgment.Strategy.MANUAL)
+  @Blocking
   Message<String> process(Message<Long> message) throws Exception {
     if (count++ % 8 == 0) {
       message.nack(new Throwable("Random failure to process a record.")).toCompletableFuture().join();
